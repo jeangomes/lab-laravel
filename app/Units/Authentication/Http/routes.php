@@ -14,7 +14,7 @@ use Illuminate\Http\Request;
  */
 
 Route::get('/', function() {
-    return ['name' => 'Jean Gomes temp', 'birth_date' => '1990/08/11'];
+    return ['name' => 'Jean Gomes Pereira', 'birth_date' => '1990/08/11', 'sexo' => 'M'];
 });
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {

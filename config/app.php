@@ -64,7 +64,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'America/Sao_Paulo',
 
     /*
     |--------------------------------------------------------------------------
@@ -77,7 +77,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'pt',
 
     /*
     |--------------------------------------------------------------------------
@@ -167,15 +167,19 @@ return [
          * Package Service Providers...
          */
         Laravel\Tinker\TinkerServiceProvider::class,
-
+        Migrator\MigrationServiceProvider::class,
+        Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
+        
         /*
-         * Application Service Providers...
+         * Domain Service Providers...
          */
-        Confee\Providers\AppServiceProvider::class,
-        Confee\Providers\AuthServiceProvider::class,
-        // Confee\Providers\BroadcastServiceProvider::class,
-        Confee\Providers\EventServiceProvider::class,
-        Confee\Providers\RouteServiceProvider::class,
+        Confee\Domains\Users\Providers\DomainServiceProvider::class,
+        
+        /*
+         * Units Service Providers...
+         */
+        Confee\Units\Authentication\Providers\UnitServiceProvider::class
+
 
     ],
 
