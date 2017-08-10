@@ -20,6 +20,7 @@ class Api extends RouteFile {
         $this->loginRoutes();
         $this->signUpRoutes();
         $this->usersRoutes();
+        $this->itensViagemRoutes();
     }
 
     protected function registerV1Routes() {
@@ -35,6 +36,10 @@ class Api extends RouteFile {
     }
 
     protected function usersRoutes() {
+        $this->router->get('users', 'RegisterController@users');
+    }
+
+    protected function itensViagemRoutes() {
         $this->router->get('users', 'RegisterController@users');
     }
 

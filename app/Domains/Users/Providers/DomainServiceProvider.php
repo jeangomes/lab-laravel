@@ -4,12 +4,10 @@ namespace Confee\Domains\Users\Providers;
 
 use Confee\Domains\Users\Database\Factories\UserFactory;
 
-//use Confee\Domains\Users\Database\Migrations\CreatePasswordResetsTable;
-//use Confee\Domains\Users\Database\Migrations\CreateUsersTable;
-//use Confee\Domains\Users\Database\Migrations\CreateItensViagemTable;
-use Confee\Domains\Users\Database\Migrations\ {
-    CreatePasswordResetsTable, CreateUsersTable, CreateItensViagemTable
-};
+use Confee\Domains\Users\Database\Migrations\CreatePasswordResetsTable;
+use Confee\Domains\Users\Database\Migrations\CreateUsersTable;
+use Confee\Domains\Users\Database\Migrations\CreateItensViagemTable;
+
 
 use Illuminate\Support\ServiceProvider;
 use Migrator\MigratorTrait as HasMigrations;
