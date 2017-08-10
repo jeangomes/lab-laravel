@@ -24,6 +24,7 @@ abstract class Migration extends LaravelMigration {
 
     public function __construct() {
         $this->schema = app('db')->connection()->getSchemaBuilder();
+        $this->schema->enableForeignKeyConstraints();
     }
 
     abstract function up();

@@ -3,8 +3,14 @@
 namespace Confee\Domains\Users\Providers;
 
 use Confee\Domains\Users\Database\Factories\UserFactory;
-use Confee\Domains\Users\Database\Migrations\CreatePasswordResetsTable;
-use Confee\Domains\Users\Database\Migrations\CreateUsersTable;
+
+//use Confee\Domains\Users\Database\Migrations\CreatePasswordResetsTable;
+//use Confee\Domains\Users\Database\Migrations\CreateUsersTable;
+//use Confee\Domains\Users\Database\Migrations\CreateItensViagemTable;
+use Confee\Domains\Users\Database\Migrations\ {
+    CreatePasswordResetsTable, CreateUsersTable, CreateItensViagemTable
+};
+
 use Illuminate\Support\ServiceProvider;
 use Migrator\MigratorTrait as HasMigrations;
 use Confee\Domains\Users\Database\Seeders\UserSeeder;
@@ -31,6 +37,8 @@ class DomainServiceProvider extends ServiceProvider {
         $this->migrations([
             CreateUsersTable::class,
             CreatePasswordResetsTable::class,
+            CreateItensViagemTable::class,
+            \Confee\Domains\Users\Database\Migrations\AddImportantToItensViagemTable::class,
         ]);
     }
 
